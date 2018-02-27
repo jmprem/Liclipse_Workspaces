@@ -261,9 +261,9 @@ class Student(Person):
         return str(self.details['studentID']) + "," + super().__str__() 
         
 #me = Person("", Premkumar Jayakumar", "22Feb1979", "38", "M", "Jayakumar Alagamalai", "Mallika Pichaimuthu")
-me = Student(421, "Premkumar Jayakumar", "02/22/1979", 38, "M", "Jayakumar Alagamalai", "Mallika Pichaimuthu")
-print(str(me))
-print(str(me.details['studentID']))
+#me = Student(421, "Premkumar Jayakumar", "02/22/1979", 38, "M", "Jayakumar Alagamalai", "Mallika Pichaimuthu")
+#print(str(me))
+#print(str(me.details['studentID']))
 
 import os
 def oswalk(srcdir):
@@ -275,7 +275,7 @@ def oswalk(srcdir):
         #else:
         print(childFullPath)
             
-oswalk("G:\Songs")
+#oswalk("G:\Songs")
 
 def list_op():
     resList = []
@@ -389,6 +389,19 @@ def getRunnerUp(arr):
     while runnerUp == winner:
         runnerUp = getMaxVal()
     print ("RunnerUp is " + str(runnerUp))
-getRunnerUp([20,60,90,10]) #Gives wrong result. Need to debug
-getRunnerUp([100,90,80,70])
-getRunnerUp([30,50,70,90])
+#getRunnerUp([20,60,90,10]) #Gives wrong result. Need to debug
+#getRunnerUp([100,90,80,70])
+#getRunnerUp([30,50,70,90])
+
+matrix = [[1,2,3], [4,5,6], [7,8,9], [10,11,12]]
+def transpose(matrix):
+    print("Matrix Transpose:")
+    print(matrix)
+    print(matrix[0])
+    print(matrix[0][0])
+    result = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+    print(result)
+    matrix = result
+    result = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+    print(result)
+transpose(matrix)
